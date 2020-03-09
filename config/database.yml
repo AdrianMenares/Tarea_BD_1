@@ -14,7 +14,7 @@ default: &default
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password:
+  password: Kyra9696
   host: localhost
 
 development:
@@ -47,8 +47,8 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: Forum1_production
-  username: Forum1
-  password: <%= ENV['FORUM1_DATABASE_PASSWORD'] %>
+#production:
+#  <<: *default
+  #database: Forum1_production
+  #username: Forum1
+  #password: <%= ENV['FORUM1_DATABASE_PASSWORD'] %>

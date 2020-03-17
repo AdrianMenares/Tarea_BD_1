@@ -19,6 +19,7 @@
 
         <ul class="right hide-on-med-and-down">
           <% if user_signed_in? %>
+            <li><%= link_to 'Crear Post', new_post_path, class:"waves-effect waves-light btn" %></li>
             <li><%= link_to 'Editar perfil', edit_user_registration_path, :class => 'navbar-link' %></li>
             <li><%= link_to "Cerrar sesion", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
           <% else %>

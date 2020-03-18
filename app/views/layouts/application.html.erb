@@ -10,12 +10,16 @@
   </head>
 
   <body>
-
     <div class="navbar-fixed">
-    <nav class="blue darken-2">
+    <nav class="orange darken-3">
       <div class="nav-wrapper">
 
-        <%= link_to "Foro", root_path, class: "brand-logo center" %>
+        <div class="container">
+          <a <h4> <div class='brand-logo'> <%= link_to 'Rest in Pepperoni', root_path %>  </h4>  <img src='https://fueguillos.cl/wp-content/uploads/2015/01/peperoni.png' width=60 height=60 class="logo"> </div></a>
+      </div>
+
+      <!-- link_to "Rest in Pepperoni", root_path, class: "brand-logo center" %>
+      img src='https://fueguillos.cl/wp-content/uploads/2015/01/peperoni.png' width=60 height=60> -->
 
         <ul class="right hide-on-med-and-down">
           <% if user_signed_in? %>

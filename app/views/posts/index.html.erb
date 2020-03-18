@@ -13,6 +13,7 @@
     <% @posts.each do |post| %>
       <tr>
         <td><h5><%= link_to post.titulo, post %><h5></td>
+        <td><%=h truncate(post.contenido, :length => 80) %></td>
         <td>Por: <%= post.user.email %></td>
         <td><%= link_to 'Ver', post %></td>
         <td><%= link_to 'Editar', edit_post_path(post) %></td>

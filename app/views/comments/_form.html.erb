@@ -1,5 +1,10 @@
 <%= simple_form_for [@post, @post.comments.build] do |f| %>
-  <%= f.input :comment %>
-  <%= f.submit 'Comentar', class:"waves-effect waves-light btn"%>
+  <% if user_signed_in? %>
+    <%= f.input :comment %>
+    <%= f.submit 'Comentar', class:"waves-effect waves-light btn"%>
+  <% else %>
+    <%= f.input :comment %>
+    <%= link_to "Comentar", new_user_session_path, class:"waves-effect waves-light btn"  %>
+  <% end %>
   <br>
 <% end %>

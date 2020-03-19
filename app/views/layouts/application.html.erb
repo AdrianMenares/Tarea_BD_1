@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Foroo</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <style>
+    { margin: 0; padding: 0; }
+
+    html {
+        background: url('https://lh3.googleusercontent.com/proxy/njN1FxfK9ymmXqWDzNGgUVG0EyVvXrlNyMZATgQuUDNtZQXUJ8c5mNcIY9zBo8WbdEl72eLzxPoII9SP-ccbBufIDIoMpk4sazTvW7eM') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+</style>
+    <div class="navbar-fixed">
+    <nav class="orange darken-3">
+        <div class="container">
+          <a <h4> <div class='brand-logo'> <%= link_to 'Rest in Pepperoni', root_path %>  </h4>  <img src='https://fueguillos.cl/wp-content/uploads/2015/01/peperoni.png' width=60 height=60 class="logo"> </div></a>
+      </div>
+
+      <!-- link_to "Rest in Pepperoni", root_path, class: "brand-logo center" %>
+      img src='https://fueguillos.cl/wp-content/uploads/2015/01/peperoni.png' width=60 height=60> -->
+
+        <ul class="right hide-on-med-and-down">
+          <% if user_signed_in? %>
+            <li><%= link_to 'Crear Post', new_post_path, class:"waves-effect waves-light btn" %></li>
+            <li><%= link_to 'Editar perfil', edit_user_registration_path, :class => 'navbar-link' %></li>
+            <li><%= link_to "Cerrar sesion", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
+          <% else %>
+            <li><%= link_to "Registrarse", new_user_registration_path, :class => 'navbar-link'  %><li>
+            <li><%= link_to "Iniciar Sesion", new_user_session_path, :class => 'navbar-link'  %><li>
+        <% end %>
+
+        </ul>
+      </div>
+    </nav>
+    <p class="navbar-text float-right">
+</p>
+    </div>
+    <div class="container">
+
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h3><%= @post.titulo %></h3>
+
+<p>
+  <%= @post.contenido %>
+</p>
+
+<p> Comentarios: <%= @post.comments.count %> </p>
+
+
+<table>
+        <thead>
+          <tr>
+              <th>Comentarios: <%= @post.comments.count %></th>
+              <th></th>
+          <tr>
+        <thead>
+<% @post.comments.each do |f|%>
+        <tbody>
+          <tr>
+            <td><%= f.user.email %> </td>
+            <td><%= f.comment %> </td>
+          </tr>
+        <tbody>
+      <table>
+        <%end%>
+
+
+<br>
+<%= render 'comments/form' %>
+
+<br>
+
+<%= link_to 'Editar', edit_post_path(@post) %> |
+<%= link_to 'Volver', posts_path %>

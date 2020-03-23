@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+BDCHAN: Pizza edition.
 
-Things you may want to cover:
+La base de datos tiene tablas para usuarios, migraciones, secciones, posts y comentarios.
 
-* Ruby version
+Se añadieron las gemas simple_form para facilitar algunas cosas, devise para el modelo de los usuarios, y materialize-scss para el diseño visual de la pagina.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Estoy actualmente trabajando en las secciones para implementarlas de forma apropiada a la pagina.
